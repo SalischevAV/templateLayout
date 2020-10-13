@@ -10,23 +10,23 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&amp;subset=cyrillic-ext"
         rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 </head>
 
 <body>
 
-    <header class='header active'>
-    <!-- <header class='header header--fixed'> -->
+    <header class='header' id='header'>
         <div class="container">
             <div class="header__inner">
-                <div class="header__logo">SalischevAV</div>
+                <div class="header__logo" data-scroll="#intro">SalischevAV</div>
 
-                <nav class='nav'>
-                    <a class='nav__link active' href="">ABOUT</a>
-                    <a class='nav__link' href="">SERVICE</a>
-                    <a class='nav__link' href="">WORK</a>
-                    <a class='nav__link' href="">BLOG</a>
-                    <a class='nav__link' href="">CONTACT</a>
-                    <a class='nav__link' href="">
+                <nav class='nav' id='nav'>
+                    <a class="nav__link" href="#" data-scroll="#about">ABOUT</a>
+                    <a class='nav__link' href="#" data-scroll='#service'>SERVICE</a>
+                    <a class='nav__link' href="#" data-scroll='#work'>WORK</a>
+                    <a class='nav__link' href="#" data-scroll='#blog'>BLOG</a>
+                    <a class='nav__link' href="#" data-scroll='#contact'>CONTACT</a>
+                    <a class='nav__link' href="#">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
                     <a class='nav__link' href="">
@@ -34,15 +34,15 @@
                     </a>
                 </nav>
 
-                <button class="nav-toggle" type='button'>
+                <id class="nav-toggle" id='nav-toggle'>
                     <span class='nav-toggle__item'>Menu</span>
-                </button>
+                </id>
 
             </div>
         </div>
     </header>
 
-    <div class="intro">
+    <div class="intro" id='intro'>
         <div class="container">
             <div class="intro__inner">
                 <h2 class="intro__undertitle">Portfolio and CV</h2>
@@ -77,7 +77,7 @@
         </div>
     </div>
 
-    <section class='section'>
+    <section class='section' id='about'>
         <div class="container">
             <div class="section__header">
                 <h3 class='section__undertitle'>What i do</h3>
@@ -150,7 +150,7 @@
     </div>
 
 
-    <section class="section section--services">
+    <section class="section section--services" id='service'>
         <div class="container">
             <div class="section__header">
                 <h3 class='section__undertitle'>We work with</h3>
@@ -196,10 +196,12 @@
                         <div class="services__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
                             exercitationem.</div>
                     </div>
-                </div><!--services-->
-                
+                </div>
+                <!--services-->
 
-            </div><!--/.container-->
+
+            </div>
+            <!--/.container-->
     </section>
 
     <section class="section section--design">
@@ -236,12 +238,12 @@
                 </div>
                 <div class="do__item">
                     <div class="accordion">
-                        <div class="accordion__item">
+                        <div class="accordion__item" data-collapse='#do_1'>
                             <div class="accordion__header">
                                 <img src="assets/images/Ido/photografy.png" alt="" class="accordion__icon">
                                 <div class="accordion__title">photography</div>
                             </div>
-                            <div class="accordion__content">
+                            <div class="accordion__content" id='do_1'>
                                 <p>Lorem ipsum dolor sit amet consectetur
                                     adipisicing elit. A, molestias!
                                     Lorem ipsum dolor sit amet, consectetur
@@ -252,12 +254,12 @@
                                     corporis nihil ab?</p>
                             </div>
                         </div>
-                        <div class="accordion__item active">
+                        <div class="accordion__item" data-collapse='#do_2'>
                             <div class="accordion__header">
                                 <img src="assets/images/Ido/creativity.png" alt="" class="accordion__icon">
                                 <div class="accordion__title">creativity</div>
                             </div>
-                            <div class="accordion__content">
+                            <div class="accordion__content" id='do_2'>
                                 <p>Lorem ipsum dolor sit amet consectetur
                                     adipisicing elit. A, molestias!
                                     Lorem ipsum dolor sit amet, consectetur
@@ -268,12 +270,12 @@
                                     corporis nihil ab?</p>
                             </div>
                         </div>
-                        <div class="accordion__item">
+                        <div class="accordion__item active" data-collapse='#do_3'>
                             <div class="accordion__header">
                                 <img src="assets/images/Ido/web.png" alt="" class="accordion__icon">
                                 <div class="accordion__title">web design</div>
                             </div>
-                            <div class="accordion__content">
+                            <div class="accordion__content" id='do_3'>
                                 <p>Lorem ipsum dolor sit amet consectetur
                                     adipisicing elit. A, molestias!
                                     Lorem ipsum dolor sit amet, consectetur
@@ -298,20 +300,56 @@
         <div class="container">
             <div class="reviews">
 
-                <a href="" class='reviews__btn reviews__btn--prev'>Prev</a>
-                <a href="" class='reviews__btn reviews__btn--next'>Next</a>
+                <!-- <a href="" class='reviews__btn reviews__btn--prev'>Prev</a>
+                <a href="" class='reviews__btn reviews__btn--next'>Next</a> -->
 
-                <div class="reviews__item">
-                    <img src="assets/images/Ido/john.png" alt="" class="reviews__photo">
-                    <div class="reviews__text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Itaque laboriosam earum eius maxime quidem! Atque aliquid
-                        vitae labore. Doloribus, deleniti? Lorem ipsum dolor sit
-                        amet consectetur adipisicing elit.
+                <div data-slider>
+
+                    <div>
+                        <div class="reviews__item">
+                            <img src="assets/images/Ido/john.png" alt="" class="reviews__photo">
+                            <div class="reviews__text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Itaque laboriosam earum eius maxime quidem! Atque aliquid
+                                vitae labore. Doloribus, deleniti? Lorem ipsum dolor sit
+                                amet consectetur adipisicing elit.
+                            </div>
+                            <div class="reviews__author">
+                                Jonh Doe
+                            </div>
+                        </div>
                     </div>
-                    <div class="reviews__author">
-                        Jonh Doe
+
+                    <div>
+                        <div class="reviews__item">
+                            <img src="assets/images/Ido/john.png" alt="" class="reviews__photo">
+                            <div class="reviews__text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Itaque laboriosam earum eius maxime quidem! Atque aliquid
+                                vitae labore. Doloribus, deleniti? Lorem ipsum dolor sit
+                                amet consectetur adipisicing elit.
+                            </div>
+                            <div class="reviews__author">
+                                Emil Lambert
+                            </div>
+                        </div>
                     </div>
+
+                    <div>
+                        <div class="reviews__item">
+                            <img src="assets/images/Ido/john.png" alt="" class="reviews__photo">
+                            <div class="reviews__text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Itaque laboriosam earum eius maxime quidem! Atque aliquid
+                                vitae labore. Doloribus, deleniti? Lorem ipsum dolor sit
+                                amet consectetur adipisicing elit.
+                            </div>
+                            <div class="reviews__author">
+                                Ahgela Merkel
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -430,11 +468,12 @@
         </div>
         <!--container-->
     </section>
-    <div class="section section--gray"><!--logos-->
+    <div class="section section--gray">
+        <!--logos-->
         <div class="container">
             <div class="logos">
                 <div class="logos__item">
-                    <img src="assets/images/logos/1.png" alt=""  class='logos__img'>
+                    <img src="assets/images/logos/1.png" alt="" class='logos__img'>
                 </div>
                 <div class="logos__item">
                     <img src="assets/images/logos/2.png" alt="" class='logos__img'>
@@ -451,12 +490,13 @@
                 <div class="logos__item">
                     <img src="assets/images/logos/6.png" alt="" class='logos__img'>
                 </div>
-                
+
             </div>
         </div>
-    </div><!--logos-->
+    </div>
+    <!--logos-->
 
-    <section class='section'>
+    <section class='section' id='work'>
         <div class="container">
             <div class="section__header">
                 <h3 class='section__undertitle'>What we do</h3>
@@ -538,20 +578,55 @@
         <div class="container">
             <div class="reviews">
 
-                <a href="" class='reviews__btn reviews__btn--prev'>Prev</a>
-                <a href="" class='reviews__btn reviews__btn--next'>Next</a>
+                <!-- <a href="" class='reviews__btn reviews__btn--prev'>Prev</a>
+                <a href="" class='reviews__btn reviews__btn--next'>Next</a> -->
 
-                <div class="reviews__item">
-                    <img src="assets/images/avatars/avatar.jpg" alt="" class="reviews__photo">
-                    <div class="reviews__text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Itaque laboriosam earum eius maxime quidem! Atque aliquid
-                        vitae labore. Doloribus, deleniti? Lorem ipsum dolor sit
-                        amet consectetur adipisicing elit.
+                <div data-slider>
+                    <div>
+                        <div class="reviews__item">
+                            <img src="assets/images/avatars/avatar.jpg" alt="" class="reviews__photo">
+                            <div class="reviews__text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Itaque laboriosam earum eius maxime quidem! Atque aliquid
+                                vitae labore. Doloribus, deleniti? Lorem ipsum dolor sit
+                                amet consectetur adipisicing elit.
+                            </div>
+                            <div class="reviews__author">
+                                Jonh Doe
+                            </div>
+                        </div>
                     </div>
-                    <div class="reviews__author">
-                        Jonh Doe
+
+                    <div>
+                        <div class="reviews__item">
+                            <img src="assets/images/logos/1.png" alt="" class="reviews__photo">
+                            <div class="reviews__text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Itaque laboriosam earum eius maxime quidem! Atque aliquid
+                                vitae labore. Doloribus, deleniti? Lorem ipsum dolor sit
+                                amet consectetur adipisicing elit.
+                            </div>
+                            <div class="reviews__author">
+                                Jonh Doe
+                            </div>
+                        </div>
                     </div>
+
+                    <div>
+                        <div class="reviews__item">
+                            <img src="assets/images/logos/2.png" alt="" class="reviews__photo">
+                            <div class="reviews__text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Itaque laboriosam earum eius maxime quidem! Atque aliquid
+                                vitae labore. Doloribus, deleniti? Lorem ipsum dolor sit
+                                amet consectetur adipisicing elit.
+                            </div>
+                            <div class="reviews__author">
+                                Jonh Doe
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -561,7 +636,7 @@
         <div class="container">
             <div class="section__header">
                 <h3 class='section__undertitle'>Happy clients</h3>
-                <h2 class='section__title'>What people say</h2>                                
+                <h2 class='section__title'>What people say</h2>
             </div>
 
             <div class="clients">
@@ -571,9 +646,9 @@
                         <div class="clients__name">Sean Connery</div>
                         <div class="clients__prof">Turbo diver</div>
                         <div class="clients__text">
-                            Lorem ipsum dolor sit 
-                            amet consectetur adipisicing elit. Et exercitationem 
-                            porro ex fuga quas asperiores corporis obcaecati 
+                            Lorem ipsum dolor sit
+                            amet consectetur adipisicing elit. Et exercitationem
+                            porro ex fuga quas asperiores corporis obcaecati
                             oluptatibus architecto id.
                         </div>
                     </div>
@@ -584,9 +659,9 @@
                         <div class="clients__name">Sean Penn</div>
                         <div class="clients__prof">Turbo diver</div>
                         <div class="clients__text">
-                            Lorem ipsum dolor sit 
-                            amet consectetur adipisicing elit. Et exercitationem 
-                            porro ex fuga quas asperiores corporis obcaecati 
+                            Lorem ipsum dolor sit
+                            amet consectetur adipisicing elit. Et exercitationem
+                            porro ex fuga quas asperiores corporis obcaecati
                             oluptatibus architecto id.
                         </div>
                     </div>
@@ -597,9 +672,9 @@
                         <div class="clients__name">Bruce Willise</div>
                         <div class="clients__prof">Turbo diver</div>
                         <div class="clients__text">
-                            Lorem ipsum dolor sit 
-                            amet consectetur adipisicing elit. Et exercitationem 
-                            porro ex fuga quas asperiores corporis obcaecati 
+                            Lorem ipsum dolor sit
+                            amet consectetur adipisicing elit. Et exercitationem
+                            porro ex fuga quas asperiores corporis obcaecati
                             oluptatibus architecto id.
                         </div>
                     </div>
@@ -610,9 +685,9 @@
                         <div class="clients__name">Vin Diesel</div>
                         <div class="clients__prof">Turbo diver</div>
                         <div class="clients__text">
-                            Lorem ipsum dolor sit 
-                            amet consectetur adipisicing elit. Et exercitationem 
-                            porro ex fuga quas asperiores corporis obcaecati 
+                            Lorem ipsum dolor sit
+                            amet consectetur adipisicing elit. Et exercitationem
+                            porro ex fuga quas asperiores corporis obcaecati
                             oluptatibus architecto id.
                         </div>
                     </div>
@@ -622,11 +697,11 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section" id='blog'>
         <div class="container">
             <div class="section__header">
                 <h3 class='section__undertitle'>Our stories</h3>
-                <h2 class='section__title'>latest blog</h2>                                
+                <h2 class='section__title'>latest blog</h2>
             </div>
 
             <div class="blog">
@@ -643,12 +718,12 @@
                     </div>
 
                     <div class="blog__contetnt">
-                            <div class="blog__title">
-                                <a href="#">Lorem, ipsum dolor.</a>
-                            </div>
+                        <div class="blog__title">
+                            <a href="#">Lorem, ipsum dolor.</a>
+                        </div>
                         <div class="blog__text">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Praesentium tempore ad non officiis libero dolore 
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Praesentium tempore ad non officiis libero dolore
                             repudiandae obcaecati vero possimus.
                         </div>
                     </div>
@@ -666,10 +741,11 @@
                         </div>
                     </div>
 
-                </div><!--blog__item-->
+                </div>
+                <!--blog__item-->
 
                 <div class="blog__item">
-                    
+
                     <div class="blog__header">
                         <a href="">
                             <img src="assets/images/blog/2.png" alt="" class='blog__photo'>
@@ -680,12 +756,12 @@
                     </div>
 
                     <div class="blog__contetnt">
-                            <div class="blog__title">
-                                <a href="#">Lorem, ipsum dolor.</a>
-                            </div>
+                        <div class="blog__title">
+                            <a href="#">Lorem, ipsum dolor.</a>
+                        </div>
                         <div class="blog__text">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Praesentium tempore ad non officiis libero dolore 
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Praesentium tempore ad non officiis libero dolore
                             repudiandae obcaecati vero possimus.
                         </div>
                     </div>
@@ -703,10 +779,11 @@
                         </div>
                     </div>
 
-                </div><!--blog__item-->
+                </div>
+                <!--blog__item-->
 
                 <div class="blog__item">
-                    
+
                     <div class="blog__header">
                         <a href="">
                             <img src="assets/images/blog/3.png" alt="" class='blog__photo'>
@@ -717,12 +794,12 @@
                     </div>
 
                     <div class="blog__contetnt">
-                            <div class="blog__title">
-                                <a href="#">Lorem, ipsum dolor.</a>
-                            </div>
+                        <div class="blog__title">
+                            <a href="#">Lorem, ipsum dolor.</a>
+                        </div>
                         <div class="blog__text">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Praesentium tempore ad non officiis libero dolore 
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Praesentium tempore ad non officiis libero dolore
                             repudiandae obcaecati vero possimus.
                         </div>
                     </div>
@@ -740,11 +817,14 @@
                         </div>
                     </div>
 
-                </div><!--blog__item-->
+                </div>
+                <!--blog__item-->
 
-            </div><!--blog-->
+            </div>
+            <!--blog-->
 
-        </div><!--container-->
+        </div>
+        <!--container-->
     </section>
 
     <div class="section section--map">
@@ -765,12 +845,12 @@
     <footer class='footer'>
         <div class="container">
             <div class="footer__inner">
-                <div class="footer__col footer__col-first"> 
+                <div class="footer__col footer__col-first" id='contact'>
                     <div class="footer__logo">MoGo</div>
                     <div class="footer__text">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                        Quas, hic modi! Incidunt temporibus voluptate, illum quam 
-                        et minima quaerat repellat, voluptatum autem dicta optio 
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Quas, hic modi! Incidunt temporibus voluptate, illum quam
+                        et minima quaerat repellat, voluptatum autem dicta optio
                         dolores. Provident ut repudiandae iste autem.
                     </div>
 
@@ -802,16 +882,12 @@
                     </div>
 
                     <form action="/" class="subscribe" method="POST">
-                        <input 
-                            type="email" 
-                            placeholder="Your Email..." 
-                            name='name'
-                            class='subscribe__input'
-                            />
+                        <input type="email" placeholder="Your Email..." name='name' class='subscribe__input' />
                         <button type="submit" class='subscribe__button'>subscribe</button>
                     </form>
 
-                </div><!--footer__col-->
+                </div>
+                <!--footer__col-->
 
                 <div class="footer__col footer__col-second">
                     <div class="footer__title">Blogs</div>
@@ -819,33 +895,34 @@
                     <div class="blogs">
                         <div class="blogs__item">
                             <img src="assets/images/footer/b1.png" alt="" class="blogs__img">
-                                <div class="blogs__content">
-                                    <a href="" class="blogs__title">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                    </a>
-                                    <div class="blogs__date"> Jan 9, 2020</div>
-                                </div>
+                            <div class="blogs__content">
+                                <a href="" class="blogs__title">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                </a>
+                                <div class="blogs__date"> Jan 9, 2020</div>
+                            </div>
                         </div>
                         <div class="blogs__item">
                             <img src="assets/images/footer/b2.png" alt="" class="blogs__img">
-                                <div class="blogs__content">
-                                    <a href="" class="blogs__title">
-                                        Lorem, ipsum dolor.
-                                    </a>
-                                    <div class="blogs__date"> Jun 12, 2020</div>
-                                </div>
+                            <div class="blogs__content">
+                                <a href="" class="blogs__title">
+                                    Lorem, ipsum dolor.
+                                </a>
+                                <div class="blogs__date"> Jun 12, 2020</div>
+                            </div>
                         </div>
                         <div class="blogs__item">
                             <img src="assets/images/footer/b3.png" alt="" class="blogs__img">
-                                <div class="blogs__content">
-                                    <a href="" class="blogs__title">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                    </a>
-                                    <div class="blogs__date"> Sep 5, 2020</div>
-                                </div>
+                            <div class="blogs__content">
+                                <a href="" class="blogs__title">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                </a>
+                                <div class="blogs__date"> Sep 5, 2020</div>
+                            </div>
                         </div>
                     </div>
-                </div> <!--footer__col-->
+                </div>
+                <!--footer__col-->
 
                 <div class="footer__col footer__col-third">
                     <div class="footer__title">Instagram</div>
@@ -878,21 +955,26 @@
                             <img src="assets/images/footer/i9.png" alt="" class='instagram__img'>
                         </a>
                     </div>
-                </div><!--footer__col-->
+                </div>
+                <!--footer__col-->
 
 
-            </div><!--footer__inner-->
+            </div>
+            <!--footer__inner-->
 
             <div class="copyright">
                 © 2016 MoGo free PSD template by <span>Laaqiq</span>
             </div>
 
-        </div><!--container-->
+        </div>
+        <!--container-->
     </footer>
 
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src='assets/js/script.js'></script>
 </body>
 
 </html>
